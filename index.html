@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <title>Travelia Inc.</title>
 </head>
 <body>
@@ -14,19 +13,21 @@
             <div class="logo">
                 <img src="images/logo.svg" alt="logo">
             </div>
-            <ul class="nav-links" id="navLinks">
+            <ul class="sidebar" id="menuList">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">Contacts</a></li>
+                <li>
+                    <div class="nav-btn">
+                        <button class="login-btn">Log In</button>
+                        <button class="signup-btn">Sign Up</button>
+                    </div>
+                </li>
             </ul>
-            <div class="nav-btn">
-                <button class="login-btn">Log In</button>
-                <button class="signup-btn">Sign Up</button>
-            </div>
             <div class="toggle-btn">
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars" onclick="showSidebar()"></i>
             </div>
         </nav>
 
@@ -293,6 +294,7 @@
         <p>© Copyright 2024. Prowdly Developed By <a href="#">Loneerr</a></p>
     </div>
 
+    <script src="script.js"></script>
 
 </body>
 </html>

@@ -4,22 +4,30 @@
     box-sizing: border-box;
 }
 body {
+    /* min-height: 100vh; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #faeded;
 }
 header {
     width: 100%;
+    position: relative;
 }
 nav {
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
     padding: 20px 50px;
-    /* position: fixed;
-    z-index: 1000; */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+nav div img {
+    width: 80%;
 }
 nav img:hover {
     cursor: pointer;
@@ -27,7 +35,7 @@ nav img:hover {
 nav ul {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 4vw;
 }
 nav ul li {
     list-style-type: none;
@@ -39,7 +47,7 @@ nav ul li a {
     font-size: 15px;
     font-weight: 500;
 }
-nav ul li::after {
+/* nav ul li::after {
     content: "";
     position: absolute;
     left: 0;
@@ -51,10 +59,10 @@ nav ul li::after {
 }
 nav ul li:hover::after {
     width: 100%;
-}
+} */
 .nav-btn button {
     border: none;
-    margin-right: 12px;
+    margin-right: 15px;
     padding: 9px 18px;
     border-radius: 20px;
     font-size: 15px;
@@ -70,27 +78,40 @@ nav ul li:hover::after {
 .nav-btn .login-btn {
     color: #ffffff;
     background-color: #7e7e7e;
+    font-weight: 550;
 }
 .nav-btn .signup-btn {
     background-color: #d33fd3;
+    font-weight: 550;
 }
 .toggle-btn {
     display: none;
 }
 
 @media screen and (max-width: 1000px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
+    nav ul { 
+        background-color: fgb(255, 255, 255, 0.3);
+        position: fixed;
+        top: 80px;
+        right: 0;
+        width: 300px;
+        min-height: 100vh;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0;
+        backdrop-filter: blur(10px);
     }
     nav ul li {
         padding: 10px;
+        margin-left: 10px;
     }
-    nav ul li::after {
-        display: none;
+    .login-btn, .signup-btn {
+        display: block;
     }
-    .nav-btn {
-        display: none;
+    .nav-btn button {
+        margin-bottom: 20px;
     }
     .toggle-btn {
         display: block;
@@ -102,17 +123,17 @@ nav ul li:hover::after {
     }
     .toggle-btn i:hover {
         background-color: #cacaca;
-        border-radius: 10px;
+        border-radius: 5px;
         cursor: pointer;
-        padding: 8px;
+        padding: 5px;
     }
-} 
+}
 
 /* Header Info */
 
 .container {
     width: 90%;
-    margin: 50px auto;
+    margin: 100px auto;
     display: flex;
 }
 .container div {
@@ -802,7 +823,7 @@ nav ul li:hover::after {
 
 .contact-us {
     width: 90%;
-    margin: 100px auto 50px auto;
+    margin: 100px auto 20px auto;
     padding: 1em;
     color: hsl(0, 0%, 40%);
 }
@@ -896,18 +917,18 @@ nav ul li:hover::after {
 
 .footer {
     width: 90%;
-    margin: 50px auto;
+    margin: 50px auto 10px auto;
     text-align: center;
     padding: 20px;
     color: hsl(0, 0%, 40%);
-    border-top: 2px solid hsl(0, 0%, 40%);
+    border-top: 1px solid hsl(0, 0%, 40%);
 }
 .footer p {
-    font-size: 18px;
+    font-size: 17px;
 }
 
 @media screen and (max-width: 600px) {
     .footer p {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
