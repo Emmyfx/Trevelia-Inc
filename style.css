@@ -84,17 +84,28 @@ nav ul li:hover::after {
     background-color: #d33fd3;
     font-weight: 550;
 }
+.toggle-btn i {
+    font-size: 25px;
+    color: #d33fd3;
+    transition: all 0.5s ease;
+}
+.toggle-btn i:hover {
+    background-color: #cacaca;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
 .toggle-btn {
     display: none;
 }
 
 @media screen and (max-width: 1000px) {
     nav ul { 
-        background-color: fgb(255, 255, 255, 0.3);
-        position: fixed;
+        background-color: rgba(255, 255, 255, 0.3);
+        position: absolute;
         top: 80px;
         right: 0;
-        width: 300px;
+        width: 250px;
         min-height: 100vh;
         display: none;
         flex-direction: column;
@@ -116,16 +127,8 @@ nav ul li:hover::after {
     .toggle-btn {
         display: block;
     }
-    .toggle-btn i {
-        font-size: 25px;
-        color: #d33fd3;
-        transition: all 0.5s ease;
-    }
-    .toggle-btn i:hover {
-        background-color: #cacaca;
-        border-radius: 5px;
-        cursor: pointer;
-        padding: 5px;
+    nav .sidebar.active {
+        display: flex;
     }
 }
 
@@ -207,7 +210,7 @@ nav ul li:hover::after {
         font-size: 17px;
     }
     .header-image img {
-      width: 50vw;
+      width: 60vw;
       margin: 0 auto;
       float: none; 
       display: flex;
